@@ -2,14 +2,14 @@ import { Route, Routes } from 'react-router-dom';
 import { SignIn } from '../../views/SignIn';
 import { Main } from '../layout/Main/Main';
 
-export const App = () => {
+export function App() {
   return (
-    <div className='flex flex-col w-full min-h-screen bg-gray-900'>
+    <div className="flex flex-col w-full min-h-screen bg-gray-900">
       <Main>
         <Routes>
-          <Route path='/zaloguj' element={<SignIn />} />
+          <Route path="/zaloguj" element={<SignIn />} />
         </Routes>
       </Main>
     </div>
   );
-};
+}

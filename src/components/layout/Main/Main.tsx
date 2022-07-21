@@ -4,10 +4,10 @@ interface MainProps {
   children: ReactNode;
 }
 
-export const Main = ({ children }: MainProps) => {
+export function Main({ children }: MainProps) {
   return (
-    <main className='flex justify-center items-center flex-grow'>
+    <main className="flex justify-center items-center flex-grow">
       {children}
     </main>
   );
-};
+}
