@@ -61,10 +61,10 @@ export const SignIn = () => {
             <div className='rounded-md shadow-sm -space-y-px'>
               <FormInput
                 {...register('email', {
-                  required: 'E-mail is required',
+                  required: 'Adres e-mail jest wymagany',
                   pattern: {
                     value: /.+@.+/,
-                    message: 'Invalid e-mail',
+                    message: 'Podano nieprawidłowy adres e-mail',
                   },
                   onChange: onEmailChange,
                 })}
@@ -74,10 +74,10 @@ export const SignIn = () => {
               />
               <FormInput
                 {...register('password', {
-                  required: 'Password is required',
+                  required: 'Hasło jest wymagane',
                 })}
                 type='password'
-                placeholder='Password'
+                placeholder='Hasło'
                 error={errors.password}
               />
             </div>
@@ -93,7 +93,7 @@ export const SignIn = () => {
             <div className='flex items-center justify-between'>
               <p className='text-xs text-gray-100 mr-4'>
                 Nie masz konta?{' '}
-                <Link to='/signup' className='text-xs font-medium text-gray-100 hover:text-gray-500'>
+                <Link to='/zarejestruj' className='text-xs font-medium text-gray-100 hover:text-gray-500'>
                   Zarejestruj się
                 </Link>
               </p>
