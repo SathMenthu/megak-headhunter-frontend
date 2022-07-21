@@ -1,37 +1,28 @@
 module.exports = {
   env: {
     browser: true,
-    es6: true,
-    node: true,
-    jest: true,
+    es2021: true,
   },
   extends: [
-    "plugin:react/recommended",
-    'airbnb-base',
-    'airbnb-typescript/base',
-    "plugin:import/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier",
+    'plugin:react/recommended',
+    'airbnb',
+    'airbnb-typescript',
+    'prettier',
   ],
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: "./tsconfig.json",
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: "latest",
-    sourceType: "module",
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: './tsconfig.json',
+    createDefaultProgram: true,
   },
-  settings: {
-    "import/resolver": {
-      typescript: {},
-    },
-  },
-  root: true,
-  plugins: ["react", "react-hooks", "@typescript-eslint", "prettier"],
+  plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {
-    'prettier/prettier': 'error',
-    'no-unused-vars': 'warn',
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'react/jsx-props-no-spreading': 'off',
     'prettier/prettier': 'error',
     'no-unused-vars': 'warn',
     'no-console': 'off',
@@ -44,42 +35,21 @@ module.exports = {
     'no-extra-boolean-cast': 'off',
     'no-param-reassign': 'off',
     'no-else-return': 'off',
-    "@typescript-eslint/interface-name-prefix": "off",
-    "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/no-use-before-define": [
-      "error"
+    'arrow-body-style': 'off',
+    'react/prop-types': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'react/require-default-props': 'off',
+    'react/no-unused-prop-types': 'off',
+    'react/jsx-filename-extension': [
+      1,
+      { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
     ],
-    "@typescript-eslint/no-shadow": [
-      "error"
-    ],
-    "no-shadow": "off",
-    "no-use-before-define": "off",
-    "react/react-in-jsx-scope": "off",
-    "react/jsx-filename-extension": [
-      "warn",
+    'react/function-component-definition': [
+      2,
       {
-        "extensions": [
-          ".tsx"
-        ]
-      }
+        namedComponents: 'arrow-function',
+        unnamedComponents: 'arrow-function',
+      },
     ],
-    "react/display-name": "off",
-    "camelcase": "error",
-    "spaced-comment": "error",
-    "quotes": [
-      "error",
-      "single"
-    ],
-    "no-duplicate-imports": "error",
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        "ts": "never",
-        "tsx": "never"
-      }
-    ]
   },
 };
