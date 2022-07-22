@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.validation-failed {
+  @apply border-b-red-500 !important;
+}
