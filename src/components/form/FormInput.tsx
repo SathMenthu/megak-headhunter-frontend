@@ -1,11 +1,9 @@
-import { forwardRef } from 'react';
+import { forwardRef, HTMLInputTypeAttribute } from 'react';
 import { FieldError, FieldValues, UseFormRegister } from 'react-hook-form';
-
-type InputTypes = 'text' | 'number' | 'checkbox' | 'email' | 'password';
 
 interface FormInputProps {
   label?: string;
-  type: InputTypes;
+  type: HTMLInputTypeAttribute;
   id?: string;
   placeholder?: string;
   checked?: boolean;
