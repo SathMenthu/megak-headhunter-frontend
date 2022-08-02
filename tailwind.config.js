@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{ts,tsx}"],
+  content: ['./src/**/*.{ts,tsx}'],
   theme: {
     extend: {
       colors: {
@@ -16,10 +16,10 @@ module.exports = {
         HRgrey: {
           DEFAULT: '#CFCFCF'},
           light: '#CFCFCF',
+      fontFamily: {
+        catamaran: ['Catamaran', 'sans-serif'],
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-  ],
-}
+  plugins: [require('@tailwindcss/forms')],
+};
