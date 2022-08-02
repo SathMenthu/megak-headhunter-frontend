@@ -1,12 +1,18 @@
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { FormInput } from '../components/form/FormInput';
 import { SubmitButton } from '../components/form/SubmitButton';
-import { getStorage } from '../utils/storageHandlers';
+import { getStorage, setStorage } from '../utils/storageHandlers';
 
 interface FormValues {
   email: string;
   password: string;
+}
+// FIX try to get types from server
+interface DefaultResponse {
+  isSuccess: boolean;
+  message: string;
 }
 
 export function SignIn() {
@@ -17,7 +23,7 @@ export function SignIn() {
     watch,
     setValue,
   } = useForm<FormValues>();
-
+  const [incorrectLoginData, isIncorrectLoginData] = useState(false);
   const navigate = useNavigate();
 
   const onEmailChange = () => {
@@ -30,19 +36,22 @@ export function SignIn() {
   };
 
   const onSubmit: SubmitHandler<FormValues> = async (data: FormValues) => {
-    console.log('data: ', data);
-
-    // Saving data to local storag after response from api
-
-    // // const res = await submitForm(data);
-    // if (res.ok) {
-    //   setStorage('credentials', [watch('email'), watch('password')])
-    // }
-
-    navigate('/profile', {
-      replace: true,
-      state: {},
+    // Saving data to locale storage after response from api
+    const res = await fetch('http://localhost:3004/api/auth/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
     });
+    const jsonData: DefaultResponse = await res.json();
+    if (jsonData.isSuccess) {
+      setStorage('credentials', [watch('email'), watch('password')]);
+      navigate('/profile', {
+        replace: true,
+        state: {},
+      });
+    } else {
+      isIncorrectLoginData(true);
+    }
   };
 
   return (
@@ -57,6 +66,11 @@ export function SignIn() {
         </div>
         <form className="mt-8 space-y-6" onSubmit={handleSubmit(onSubmit)}>
           <div className="rounded-md shadow-sm -space-y-px">
+            {incorrectLoginData && (
+              <p className="mb-2 p-0.5 bg-[#E02735] text-white text-center text-sm">
+                Hasło jest nieprawidłowe.
+              </p>
+            )}
             <FormInput
               {...register('email', {
                 required: 'Adres e-mail jest wymagany',
