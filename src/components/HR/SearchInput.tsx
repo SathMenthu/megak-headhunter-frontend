@@ -10,7 +10,7 @@ export function SearchInput() {
       </span>
       <input
         type="text"
-        className="bg-HRblack h-7 border-none text-HRgrey p-3 pl-9 placeholder:font-light font-light"
+        className="bg-HRblack h-7 w-80 border-none text-HRgrey p-3 pl-9 placeholder:font-light font-light placeholder:text-HRgrey-300"
         placeholder="Szukaj"
         value={search}
         onChange={(e) => setSearch(e.target.value)}

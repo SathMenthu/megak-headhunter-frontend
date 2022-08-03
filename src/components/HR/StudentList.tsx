@@ -1,4 +1,5 @@
 import React from 'react';
+// eslint-disable-next-line import/no-cycle
 import { Student } from './Student';
 import { arrayOfStudents } from './Placeholder_Students';
 
@@ -21,8 +22,8 @@ export function StudentList() {
               canTakeApprenticeship={value.canTakeApprenticeship}
               monthsOfCommercialExp={value.monthsOfCommercialExp}
             />
-            {arrayOfStudents.length > index && (
-              <div className="bg-HRblack-200 h-3" />
+            {arrayOfStudents.length > index + 1 && (
+              <div className="bg-HRblack h-3" />
             )}
           </>
         );

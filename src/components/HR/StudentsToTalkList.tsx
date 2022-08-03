@@ -1,9 +1,12 @@
 import React from 'react';
+// eslint-disable-next-line import/no-cycle
+import { HRMenuCallback } from '../../views/HR';
 import { arrayOfStudentsToTalk } from './Placeholder_StudentsToTalk';
+// eslint-disable-next-line import/no-cycle
 import { StudentToTalk } from './StudentToTalk';
 
 interface Props {
-  showCV: (value: string) => void;
+  showCV: (value: HRMenuCallback) => void;
 }
 export function StudentToTalkList(props: Props) {
   const { showCV } = props;
@@ -14,6 +17,7 @@ export function StudentToTalkList(props: Props) {
           <>
             <StudentToTalk
               showCV={showCV}
+              id={value.id}
               firstName={value.firstName}
               surname={value.surname}
               reservation_date={value.reservation_date}
@@ -28,8 +32,8 @@ export function StudentToTalkList(props: Props) {
               canTakeApprenticeship={value.canTakeApprenticeship}
               monthsOfCommercialExp={value.monthsOfCommercialExp}
             />
-            {arrayOfStudentsToTalk.length > index && (
-              <div className="bg-HRblack-200 h-3" />
+            {arrayOfStudentsToTalk.length > index + 1 && (
+              <div className="bg-HRblack h-3" />
             )}
           </>
         );

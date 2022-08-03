@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
+// eslint-disable-next-line import/no-cycle
+import { HRMenuCallback } from '../../views/HR';
 import { Arrow2 } from './Arrow2';
+// eslint-disable-next-line import/no-cycle
 import { RedBtn } from './RedBtn';
 import { StudentInfoBoxes } from './StudentInfoBoxes';
 
@@ -19,7 +22,8 @@ export enum ExpectedContractType {
 }
 
 export interface Props {
-  showCV: (value: string) => void;
+  showCV: (value: HRMenuCallback) => void;
+  id: string;
   surname: string;
   reservation_date?: string;
   firstName: string;
@@ -39,7 +43,7 @@ export function StudentToTalk(props: Props) {
   const [isActive, setIsActive] = useState(false);
   const student = JSON.parse(JSON.stringify(props));
   student.name = `${student.firstName} ${student.surname[0]}.`;
-  const { showCV } = props;
+  const { showCV, id } = props;
   return (
     <div className="flex flex-col my-1">
       <div className="flex flex-row justify-between px-4 items-center h-16">
@@ -57,7 +61,7 @@ export function StudentToTalk(props: Props) {
               src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
               alt="HR"
             />
-            <p className="text-HRwhite ml-4">
+            <p className="text-HRwhite font-light ml-4">
               {student.firstName} {student.surname}
             </p>
           </div>
@@ -65,7 +69,7 @@ export function StudentToTalk(props: Props) {
 
         <div className="flex flex-row justify-between px-4 items-center">
           <div className="m-0">
-            <RedBtn title="Pokaż CV" showCV={showCV} />
+            <RedBtn title="Pokaż CV" showCV={showCV} id={id} />
             <RedBtn title="Brak zainteresowania" />
             <RedBtn title="Zatrudniony" />
           </div>

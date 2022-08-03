@@ -1,7 +1,8 @@
 import { ExpectedContractType, ExpectedTypeWork } from './StudentInfoBoxes';
 
-interface ArrayOfStudentsToTalk {
+export interface StudentToTalk {
   toTalk: boolean;
+  id: string;
   firstName: string;
   surname: string;
   reservation_date: string;
@@ -17,9 +18,10 @@ interface ArrayOfStudentsToTalk {
   monthsOfCommercialExp: string;
 }
 
-export const arrayOfStudentsToTalk: ArrayOfStudentsToTalk[] = [
+export const arrayOfStudentsToTalk: StudentToTalk[] = [
   {
     toTalk: true,
+    id: '1',
     reservation_date: '11.07.2022 r.',
     firstName: 'Jan',
     surname: 'Kowalski',
@@ -36,6 +38,7 @@ export const arrayOfStudentsToTalk: ArrayOfStudentsToTalk[] = [
   },
   {
     toTalk: true,
+    id: '2',
     reservation_date: '18.07.2022 r.',
     firstName: 'Paweł',
     surname: 'Szymański',
@@ -52,6 +55,7 @@ export const arrayOfStudentsToTalk: ArrayOfStudentsToTalk[] = [
   },
   {
     toTalk: true,
+    id: '3',
     reservation_date: '20.07.2022 r.',
     firstName: 'Mariusz',
     surname: 'Lipa',
@@ -68,6 +72,7 @@ export const arrayOfStudentsToTalk: ArrayOfStudentsToTalk[] = [
   },
   {
     toTalk: true,
+    id: '4',
     reservation_date: '21.07.2022 r.',
     firstName: 'Katarzyna',
     surname: 'Kot',
@@ -84,6 +89,7 @@ export const arrayOfStudentsToTalk: ArrayOfStudentsToTalk[] = [
   },
   {
     toTalk: true,
+    id: '5',
     reservation_date: '21.07.2022 r.',
     firstName: 'Kamil',
     surname: 'Olszewski',
@@ -100,6 +106,7 @@ export const arrayOfStudentsToTalk: ArrayOfStudentsToTalk[] = [
   },
   {
     toTalk: true,
+    id: '6',
     reservation_date: '22.07.2022 r.',
     firstName: 'Aleksandra',
     surname: 'Maj',
@@ -116,6 +123,7 @@ export const arrayOfStudentsToTalk: ArrayOfStudentsToTalk[] = [
   },
   {
     toTalk: true,
+    id: '7',
     reservation_date: '19.07.2022 r.',
     firstName: 'Marcin',
     surname: 'Przybylski',
@@ -132,6 +140,7 @@ export const arrayOfStudentsToTalk: ArrayOfStudentsToTalk[] = [
   },
   {
     toTalk: true,
+    id: '8',
     reservation_date: '20.07.2022 r.',
     firstName: 'Marcin',
     surname: 'Nowak',
@@ -148,6 +157,7 @@ export const arrayOfStudentsToTalk: ArrayOfStudentsToTalk[] = [
   },
   {
     toTalk: true,
+    id: '9',
     reservation_date: '31.07.2022 r.',
     firstName: 'Łukasz',
     surname: 'Kowalski',
@@ -164,6 +174,7 @@ export const arrayOfStudentsToTalk: ArrayOfStudentsToTalk[] = [
   },
   {
     toTalk: true,
+    id: '10',
     reservation_date: '31.07.2022 r.',
     firstName: 'Jakub',
     surname: 'Nowak',

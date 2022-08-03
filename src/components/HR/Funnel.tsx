@@ -10,7 +10,7 @@ export function Funnel() {
       <path
         transform="translate(-350 -144.09)"
         d="m350 144.09h180v20l-70 90v100l-40-20v-80l-70-90v-20"
-        fill="#666"
+        fill="#4d4d4d"
       />
     </svg>
   );

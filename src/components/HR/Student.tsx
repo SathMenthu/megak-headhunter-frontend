@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Arrow2 } from './Arrow2';
+// eslint-disable-next-line import/no-cycle
 import { RedBtn } from './RedBtn';
 import { StudentInfoBoxes } from './StudentInfoBoxes';
 
@@ -42,7 +43,7 @@ export function Student(props: Props) {
   return (
     <div className="flex flex-col my-1">
       <div className="flex flex-row justify-between px-4 items-center h-16">
-        <p className="text-HRwhite">{student.name}</p>
+        <p className="text-HRwhite font-light">{student.name}</p>
         <div className="flex flex-row justify-between px-4 items-center">
           <RedBtn title="Zarezerwuj rozmowę" />
           <button type="button" onClick={() => setIsActive(!isActive)}>
