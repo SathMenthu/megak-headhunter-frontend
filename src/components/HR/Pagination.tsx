@@ -1,5 +1,5 @@
 import React from 'react';
-import { Arrow } from './Arrow';
+import { PaginationBtn } from './PaginationBtn';
 
 export function Pagination() {
   return (
@@ -13,18 +13,8 @@ export function Pagination() {
       </select>
       <p className="mx-5 font-light">10 z 40</p>
       <div className="flex flex-row justify-center items-center">
-        <button
-          type="button"
-          className="h-6 w-6 bg-HRblack-100 mx-2 flex justify-center items-center"
-        >
-          <Arrow />
-        </button>
-        <button
-          type="button"
-          className="h-6 w-6 bg-HRwhite rotate-180 flex justify-center items-center"
-        >
-          <Arrow />
-        </button>
+        <PaginationBtn />
+        <PaginationBtn isActive direction="right" />
       </div>
     </div>
   );
