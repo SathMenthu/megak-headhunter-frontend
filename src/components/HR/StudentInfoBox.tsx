@@ -14,8 +14,9 @@ export function StudentInfoBox(props: Props) {
       <p className="items-start py-2 text-HRgrey">{header}</p>
       <p className="items-end py-2">
         {typeof value === 'number' ? (
-          <div className="flex flex-row text-HRgrey-100">
-            <span className="font-extrabold text-HRwhite">{value}</span> / 5
+          <div className="flex flex-row text-HRgrey-100 items-center">
+            <span className="font-extrabold text-HRwhite">{value} </span>
+            <span className="mr-4">&nbsp;/ 5</span>
             {stars && <StarList value={value} />}
           </div>
         ) : null}
