@@ -24,7 +24,7 @@ export function Star({ isActive }: Props) {
   }
   return (
     <svg
-      className="bg-HRblack-300"
+      className="bg-HRgrey-400"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       width="21px"
