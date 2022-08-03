@@ -1,6 +1,10 @@
 import React from 'react';
 
-export function Arrow() {
+interface Props {
+  color?: string;
+}
+
+export function Arrow({ color }: Props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -11,7 +15,7 @@ export function Arrow() {
       <path
         id="Wróć"
         d="M4.548,11.1.159,5.98a.659.659,0,0,1,0-.859L4.548,0l1,.859L1.529,5.551,5.55,10.241Z"
-        fill="#333"
+        fill={color || '#333333'}
       />
     </svg>
   );
