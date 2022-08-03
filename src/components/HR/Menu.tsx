@@ -1,12 +1,27 @@
-export {};
-// import React from 'react';
-// import { MenuItem } from './MenuItem';
+import React from 'react';
+import { MenuItem } from './MenuItem';
 
-// export function Menu() {
-//   return (
-//     <div className="flex flex-row h-6 my-6">
-//       <MenuItem title="Dostępni kursanci" isActive />
-//       <MenuItem title="Do rozmowy" />
-//     </div>
-//   );
-// }
+interface Props {
+  callback: (value: string) => void;
+  menu: string;
+}
+
+export function Menu(props: Props) {
+  const { callback, menu } = props;
+  return (
+    <>
+      <MenuItem
+        title="Dostępni kursanci"
+        value="studentList"
+        isActive={menu === 'studentList'}
+        onActive={callback}
+      />
+      <MenuItem
+        title="Do rozmowy"
+        value="toTalk"
+        isActive={menu === 'toTalk'}
+        onActive={callback}
+      />
+    </>
+  );
+}

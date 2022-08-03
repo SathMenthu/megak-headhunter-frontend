@@ -5,10 +5,7 @@ export function FilterBtn() {
   return (
     <div className="flex flex-row bg-HRblack items-center hover:animate-pulse">
       <Funnel />
-      <button
-        type="button"
-        className="bg-HRblack p-2 text-HRgrey text-sm font-light"
-      >
+      <button type="button" className="p-2 text-HRgrey text-sm font-light">
         Filtrowanie
       </button>
     </div>
