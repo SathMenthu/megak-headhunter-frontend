@@ -1,11 +1,13 @@
 import React from 'react';
+import { Funnel } from './Funnel';
 
 export function FilterBtn() {
   return (
-    <div>
+    <div className="flex flex-row bg-HRblack items-center hover:animate-pulse">
+      <Funnel />
       <button
         type="button"
-        className="bg-HRblack p-2 text-HRgrey text-sm font-light transition transform hover:animate-pulse"
+        className="bg-HRblack p-2 text-HRgrey text-sm font-light"
       >
         Filtrowanie
       </button>
