@@ -24,7 +24,7 @@ export function StudentList() {
               monthsOfCommercialExp={value.monthsOfCommercialExp}
             />
             {arrayOfStudents.length > index + 1 && (
-              <div className="bg-HRblack h-3" />
+              <div className="bg-HRblack h-3 relative top-[-4px]" />
             )}
           </React.Fragment>
         );

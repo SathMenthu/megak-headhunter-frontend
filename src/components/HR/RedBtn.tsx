@@ -16,7 +16,7 @@ export function RedBtn(props: Props) {
       <button
         onClick={() => showCV({ setMenu: 'showCV', id })}
         type="button"
-        className="bg-HRred p-2 font-extralight text-HRwhite mx-5 h-10 text-sm hover:animate-pulse"
+        className="bg-HRred p-2 font-extralight text-HRwhite mx-1 h-auto text-sm hover:animate-pulse"
       >
         {title}
       </button>
@@ -25,7 +25,7 @@ export function RedBtn(props: Props) {
   return (
     <button
       type="button"
-      className="bg-HRred p-2 font-extralight text-HRwhite mx-5 h-10 text-sm hover:animate-pulse"
+      className="bg-HRred p-2 font-extralight text-HRwhite mx-1 h-auto text-sm hover:animate-pulse my-2"
     >
       {title}
     </button>

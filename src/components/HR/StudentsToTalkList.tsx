@@ -33,7 +33,7 @@ export function StudentToTalkList(props: Props) {
               monthsOfCommercialExp={value.monthsOfCommercialExp}
             />
             {arrayOfStudentsToTalk.length > index + 1 && (
-              <div className="bg-HRblack h-3" />
+              <div className="bg-HRblack h-3 relative top-[-4px]" />
             )}
           </React.Fragment>
         );

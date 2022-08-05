@@ -3,7 +3,7 @@ import { PaginationBtn } from './PaginationBtn';
 
 export function Pagination() {
   return (
-    <div className="container mx-auto flex flex-row  place-content-end my-2 text-HRgrey text-sm items-center">
+    <div className="container mx-auto flex flex-row  place-content-end my-2 text-HRgrey text-sm items-center px-3">
       <p className="mx-2 font-light">Ilość elementów</p>
       <select className="mx-2 bg-HRblack text-sm">
         <option value="1">10</option>
