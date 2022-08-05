@@ -1,15 +1,27 @@
 import React from 'react';
 
 interface Props {
-  isActive: boolean;
+  isActive?: boolean;
+  rotate?: 'left';
 }
 
 export function Arrow2(props: Props) {
-  const { isActive } = props;
+  const { isActive, rotate } = props;
+  let classRotate = isActive ? '' : 'rotate-180';
+
+  if (rotate) {
+    switch (rotate) {
+      case 'left':
+        classRotate = 'rotate-[270deg]';
+        break;
+      default:
+        break;
+    }
+  }
   return (
     <div className="hover:animate-pulse">
       <svg
-        className={isActive ? '' : 'rotate-180'}
+        className={classRotate}
         xmlns="http://www.w3.org/2000/svg"
         width="30"
         height="30"

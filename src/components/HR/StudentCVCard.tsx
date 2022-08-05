@@ -1,6 +1,7 @@
 import React from 'react';
 // eslint-disable-next-line import/no-cycle
 import { HRMenuCallback } from '../../views/HR';
+import { Arrow2 } from './Arrow2';
 import { Envelope } from './Envelope';
 import { Phone } from './Phone';
 import {
@@ -21,16 +22,16 @@ export function StudentCVCard({ id, callback }: Props) {
     (value) => value.id === id,
   ) as StudentToTalk;
   return (
-    <div className="flex flex-col w-52 p-4 my-3 text-HRwhite bg-HRblack-400 place-self-start">
+    <div className="flex flex-col w-52 px-4 my-3 text-HRwhite bg-HRblack-400 place-self-start">
       <button
         type="button"
         onClick={() => callback({ setMenu: 'toTalk' })}
-        className="relative left-[-8rem]"
+        className="relative left-[-8rem] mx-8 flex flex-row items-center text-s font-light"
       >
-        Wróć
+        <Arrow2 rotate="left" /> Wróć
       </button>
       <img
-        className="h-24 w-24 rounded-full mb-4 mx-auto"
+        className="h-28 w-28 rounded-full mb-2 mx-auto"
         src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
         alt="HR"
       />
