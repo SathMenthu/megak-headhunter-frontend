@@ -15,5 +15,12 @@ export function StarList({ value }: Props) {
       stars.push(<Star isActive={false} />);
     }
   }
-  return <>{stars.map((val) => val)}</>;
+  return (
+    <>
+      {stars.map((val, index) => (
+        // eslint-disable-next-line react/no-array-index-key
+        <React.Fragment key={index}>{val}</React.Fragment>
+      ))}
+    </>
+  );
 }

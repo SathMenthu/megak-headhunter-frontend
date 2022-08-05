@@ -12,7 +12,7 @@ export function StudentInfoBox(props: Props) {
   return (
     <div className="flex flex-col justify-between bg-HRblack p-2 font-extralight">
       <p className="items-start py-2 text-HRgrey">{header}</p>
-      <p className="items-end py-2">
+      <div className="items-end py-2">
         {typeof value === 'number' ? (
           <div className="flex flex-row text-HRgrey-100 items-center">
             <span className="font-extrabold text-HRwhite">{value} </span>
@@ -28,7 +28,7 @@ export function StudentInfoBox(props: Props) {
         {typeof value === 'string' ? (
           <span className="font-extrabold text-HRwhite">{value}</span>
         ) : null}
-      </p>
+      </div>
     </div>
   );
 }

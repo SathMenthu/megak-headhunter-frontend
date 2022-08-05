@@ -14,7 +14,7 @@ export function StudentToTalkList(props: Props) {
     <>
       {arrayOfStudentsToTalk.map((value, index) => {
         return (
-          <>
+          <React.Fragment key={value.id}>
             <StudentToTalk
               showCV={showCV}
               id={value.id}
@@ -35,7 +35,7 @@ export function StudentToTalkList(props: Props) {
             {arrayOfStudentsToTalk.length > index + 1 && (
               <div className="bg-HRblack h-3" />
             )}
-          </>
+          </React.Fragment>
         );
       })}
     </>

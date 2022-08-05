@@ -8,7 +8,8 @@ export function StudentList() {
     <>
       {arrayOfStudents.map((value, index) => {
         return (
-          <>
+          // eslint-disable-next-line react/no-array-index-key
+          <React.Fragment key={index}>
             <Student
               name={value.name}
               courseCompletion={value.courseCompletion}
@@ -25,7 +26,7 @@ export function StudentList() {
             {arrayOfStudents.length > index + 1 && (
               <div className="bg-HRblack h-3" />
             )}
-          </>
+          </React.Fragment>
         );
       })}
     </>
