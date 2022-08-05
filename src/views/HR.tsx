@@ -36,7 +36,7 @@ export function HR() {
       : 'container mx-auto flex flex-col my-3 bg-HRblack-400 px-4';
 
   return (
-    <div className="h-auto min-h-screen w-screen bg-HRblack-100 box-content">
+    <div className="h-auto min-h-screen min-w-screen w-auto bg-HRblack-100 box-content">
       <Header />
       <div className="container mx-auto flex flex-row bg-HRblack-100">
         {menu === 'showCV' && <StudentCVCard id={userCV} callback={callback} />}
