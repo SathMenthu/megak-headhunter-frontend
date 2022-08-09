@@ -1,0 +1,148 @@
+import { ExpectedContractType, ExpectedTypeWork } from './StudentInfoBoxes';
+
+interface ArrayOfStudents {
+  name: string;
+  courseCompletion: number;
+  courseEngagment: number;
+  projectDegree: number;
+  teamProjectDegree: number;
+  expectedTypeWork: ExpectedTypeWork;
+  targetWorkCity: string;
+  expectedContractType: ExpectedContractType;
+  expectedSalary: string;
+  canTakeApprenticeship: boolean;
+  monthsOfCommercialExp: string;
+}
+
+export const arrayOfStudents: ArrayOfStudents[] = [
+  {
+    name: 'Jan K.',
+    courseCompletion: 4,
+    courseEngagment: 5,
+    projectDegree: 4,
+    teamProjectDegree: 3,
+    expectedTypeWork: ExpectedTypeWork['Na miejscu'],
+    targetWorkCity: 'Warszawa',
+    expectedContractType: ExpectedContractType['Tylko UoP'],
+    expectedSalary: '8 000 zł',
+    canTakeApprenticeship: false,
+    monthsOfCommercialExp: '6 miesięcy',
+  },
+  {
+    name: 'Paweł S.',
+    courseCompletion: 5,
+    courseEngagment: 5,
+    projectDegree: 4,
+    teamProjectDegree: 2,
+    expectedTypeWork: ExpectedTypeWork['Gotowość do przeprowadzki'],
+    targetWorkCity: 'Pcim',
+    expectedContractType: ExpectedContractType['Możliwe B2B'],
+    expectedSalary: '15 000 zł',
+    canTakeApprenticeship: true,
+    monthsOfCommercialExp: '9 miesięcy',
+  },
+  {
+    name: 'Mariusz L.',
+    courseCompletion: 5,
+    courseEngagment: 5,
+    projectDegree: 4,
+    teamProjectDegree: 2,
+    expectedTypeWork: ExpectedTypeWork['Gotowość do przeprowadzki'],
+    targetWorkCity: 'Pcim',
+    expectedContractType: ExpectedContractType['Możliwe B2B'],
+    expectedSalary: '15 000 zł',
+    canTakeApprenticeship: true,
+    monthsOfCommercialExp: '9 miesięcy',
+  },
+  {
+    name: 'Katarzyna K.',
+    courseCompletion: 5,
+    courseEngagment: 5,
+    projectDegree: 4,
+    teamProjectDegree: 2,
+    expectedTypeWork: ExpectedTypeWork['Gotowość do przeprowadzki'],
+    targetWorkCity: 'Pcim',
+    expectedContractType: ExpectedContractType['Możliwe B2B'],
+    expectedSalary: '15 000 zł',
+    canTakeApprenticeship: true,
+    monthsOfCommercialExp: '9 miesięcy',
+  },
+  {
+    name: 'Kamil O.',
+    courseCompletion: 5,
+    courseEngagment: 5,
+    projectDegree: 4,
+    teamProjectDegree: 2,
+    expectedTypeWork: ExpectedTypeWork['Gotowość do przeprowadzki'],
+    targetWorkCity: 'Pcim',
+    expectedContractType: ExpectedContractType['Możliwe B2B'],
+    expectedSalary: '15 000 zł',
+    canTakeApprenticeship: true,
+    monthsOfCommercialExp: '9 miesięcy',
+  },
+  {
+    name: 'Aleksandra M.',
+    courseCompletion: 5,
+    courseEngagment: 5,
+    projectDegree: 4,
+    teamProjectDegree: 2,
+    expectedTypeWork: ExpectedTypeWork['Gotowość do przeprowadzki'],
+    targetWorkCity: 'Pcim',
+    expectedContractType: ExpectedContractType['Możliwe B2B'],
+    expectedSalary: '15 000 zł',
+    canTakeApprenticeship: true,
+    monthsOfCommercialExp: '9 miesięcy',
+  },
+  {
+    name: 'Marcin P.',
+    courseCompletion: 5,
+    courseEngagment: 5,
+    projectDegree: 4,
+    teamProjectDegree: 2,
+    expectedTypeWork: ExpectedTypeWork['Gotowość do przeprowadzki'],
+    targetWorkCity: 'Pcim',
+    expectedContractType: ExpectedContractType['Możliwe B2B'],
+    expectedSalary: '15 000 zł',
+    canTakeApprenticeship: true,
+    monthsOfCommercialExp: '9 miesięcy',
+  },
+  {
+    name: 'Marcin R.',
+    courseCompletion: 5,
+    courseEngagment: 5,
+    projectDegree: 4,
+    teamProjectDegree: 2,
+    expectedTypeWork: ExpectedTypeWork['Gotowość do przeprowadzki'],
+    targetWorkCity: 'Pcim',
+    expectedContractType: ExpectedContractType['Możliwe B2B'],
+    expectedSalary: '15 000 zł',
+    canTakeApprenticeship: true,
+    monthsOfCommercialExp: '9 miesięcy',
+  },
+  {
+    name: 'Łukasz S.',
+    courseCompletion: 5,
+    courseEngagment: 5,
+    projectDegree: 4,
+    teamProjectDegree: 2,
+    expectedTypeWork: ExpectedTypeWork['Gotowość do przeprowadzki'],
+    targetWorkCity: 'Pcim',
+    expectedContractType: ExpectedContractType['Możliwe B2B'],
+    expectedSalary: '15 000 zł',
+    canTakeApprenticeship: true,
+    monthsOfCommercialExp: '9 miesięcy',
+  },
+  {
+    name: 'Jakub O.',
+    courseCompletion: 5,
+    courseEngagment: 5,
+    projectDegree: 4,
+    teamProjectDegree: 2,
+    expectedTypeWork: ExpectedTypeWork['Gotowość do przeprowadzki'],
+    targetWorkCity: 'Pcim',
+    expectedContractType: ExpectedContractType['Możliwe B2B'],
+    expectedSalary: '15 000 zł',
+    canTakeApprenticeship: true,
+    monthsOfCommercialExp: '9 miesięcy',
+  },
+];
